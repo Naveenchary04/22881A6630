@@ -1,0 +1,328 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #87ceeb 0%,
+    #b3e0ff 50%,
+    #e0f7fa 100%
+  );
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #00bcd4aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #00bcd4aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(135,206,235,0.15);
+}
+
+.read-the-docs {
+  color: #0077b6;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  background: rgba(135, 206, 235, 0.25);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(135, 206, 235, 0.15);
+  border-bottom: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+.header h1 {
+  margin: 0;
+  color: #0077b6;
+  text-shadow: 2px 2px 4px rgba(135, 206, 235, 0.2);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Pacifico', cursive, Arial, sans-serif;
+}
+
+.header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0077b6, transparent);
+}
+
+.footer {
+  background: rgba(135, 206, 235, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 2rem 0;
+  text-align: center;
+  color: #0077b6;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(135, 206, 235, 0.2);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.footer p::before,
+.footer p::after {
+  content: '•';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 119, 182, 0.3);
+}
+
+.footer p::before {
+  left: 0;
+}
+
+.footer p::after {
+  right: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px;
+  min-height: calc(100vh - 160px);
+  background: transparent;
+  color: #0a2540;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #0077b6;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Pacifico', cursive, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  color: #0a2540;
+  border-bottom: 2px solid #87ceeb;
+  padding-bottom: 0.5rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.15);
+  margin-bottom: 2rem;
+  transition: transform 0.2s;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #e0f7fa;
+  border-radius: 8px;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #87ceeb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: white;
+  color: #0a2540;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077b6;
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+button[type="submit"] {
+  background: #0077b6;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #0a2540;
+  transform: translateY(-1px);
+}
+
+button[type="button"] {
+  background: #e0f7fa;
+  color: #0a2540;
+}
+
+button[type="button"]:hover {
+  background: #b3e0ff;
+  transform: translateY(-1px);
+}
+
+.error {
+  background: #fff5f5;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid #c53030;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.urls-list {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 1rem;
+  background: rgba(135, 206, 235, 0.15);
+  border-radius: 16px;
+  margin: 1rem 0;
+}
+
+.url-item {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(135, 206, 235, 0.08);
+  transition: all 0.3s;
+  word-break: break-all;
+  max-width: 100%;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.url-item p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+}
+
+.url-item a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  transition: color 0.2s;
+}
+
+.url-item a:hover {
+  color: #0a2540;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .container {
+    padding: 20px 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+*:focus {
+  outline: 3px solid rgba(135, 206, 235, 0.5);
+  outline-offset: 2px;
+}
